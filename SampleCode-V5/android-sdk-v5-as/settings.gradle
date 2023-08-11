@@ -7,9 +7,9 @@ include ':sample-app-aircraft'
 include ':sample-module-common'//通用view。
 include ':sample-module-aircraft'//飞机特有view。
 
-project(':sample-app-aircraft').projectDir = new File(rootProject.projectDir, '../android-sdk-v5-sample/app-aircraft')
-project(':sample-module-common').projectDir = new File(rootProject.projectDir, '../android-sdk-v5-sample/module-common')
-project(':sample-module-aircraft').projectDir = new File(rootProject.projectDir, '../android-sdk-v5-sample/module-aircraft')
+project(':sample-app-aircraft').projectDir = new File(rootProject.projectDir, './android-sdk-v5-sample/app-aircraft')
+project(':sample-module-common').projectDir = new File(rootProject.projectDir, './android-sdk-v5-sample/module-common')
+project(':sample-module-aircraft').projectDir = new File(rootProject.projectDir, './android-sdk-v5-sample/module-aircraft')
 
 include ':uxsdk'// uxsdk模块
-project(':uxsdk').projectDir = new File(rootProject.projectDir, '../android-sdk-v5-uxsdk')
+project(':uxsdk').projectDir = new File(rootProject.projectDir, './android-sdk-v5-uxsdk')
