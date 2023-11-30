@@ -20,7 +20,7 @@ import dji.v5.manager.areacode.AreaCode
 import dji.v5.manager.areacode.AreaCodeManager
 import dji.v5.utils.common.DateUtils
 import dji.v5.utils.common.JsonUtil
-import dji.v5.utils.common.ToastUtils
+import dji.sampleV5.modulecommon.util.ToastUtils
 import dji.v5.ux.map.MapWidget
 import dji.v5.ux.mapkit.core.maps.DJIMap
 import kotlinx.android.synthetic.main.frag_fly_safe_page.*
@@ -172,7 +172,12 @@ class FlySafeFragment : DJIFragment() {
             flySafeVm.deleteFlyZoneLicensesFromAircraft()
         }
         btn_set_fly_zone_licenses_enabled.setOnClickListener {
-            flySafeVm.aircraftFlyZoneLicenseInfo.value?.let { licenses ->
+            val info = flySafeVm.aircraftFlyZoneLicenseInfo.value
+            if (info == null || info.isEmpty()) {
+                ToastUtils.showToast("Please download licenses and push to aircraft first.")
+                return@setOnClickListener
+            }
+            info.let { licenses ->
                 val enables = arrayListOf(true, false)
                 val licenseIDs = arrayListOf<Int>().apply {
                     licenses.forEach {
@@ -184,8 +189,6 @@ class FlySafeFragment : DJIFragment() {
                     resetIndex()
                 }
                 return@let
-            } ?: let {
-                ToastUtils.showToast("Please download licenses and push to aircraft first.")
             }
         }
         btn_unlock_authorization_fly_zone.setOnClickListener {

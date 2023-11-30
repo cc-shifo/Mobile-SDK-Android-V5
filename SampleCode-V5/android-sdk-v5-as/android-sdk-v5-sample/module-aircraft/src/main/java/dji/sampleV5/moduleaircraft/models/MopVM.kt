@@ -2,6 +2,7 @@ package dji.sampleV5.moduleaircraft.models
 
 import androidx.lifecycle.MutableLiveData
 import dji.sampleV5.modulecommon.models.DJIViewModel
+import dji.sampleV5.modulecommon.util.ToastUtils
 import dji.sdk.keyvalue.value.mop.PipelineDeviceType
 import dji.sdk.keyvalue.value.mop.TransmissionControlType
 import dji.v5.common.error.DJIPipeLineError
@@ -11,7 +12,6 @@ import dji.v5.manager.mop.Pipeline
 import dji.v5.manager.mop.PipelineManager
 import dji.v5.utils.common.DJIExecutor
 import dji.v5.utils.common.LogUtils
-import dji.v5.utils.common.ToastUtils
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.disposables.Disposable
@@ -57,7 +57,7 @@ class MopVM : DJIViewModel() {
                 pipeline = PipelineManager.getInstance().pipelines[id]
                 ToastUtils.showToast("Connect Success")
                 if (!isUseForDown) {
-                    startReadDataTimer()
+                    readData()
                 }
             } else {
                 ToastUtils.showToast("Connect Fail:$error")
@@ -86,6 +86,9 @@ class MopVM : DJIViewModel() {
             if (!isStop && !result.error.errorCode().equals(DJIPipeLineError.TIMEOUT)) {
                 stopMop()
             }
+        }
+        if (!isStop) {
+            readData()
         }
 
     }
@@ -141,19 +144,6 @@ class MopVM : DJIViewModel() {
         LogUtils.d("Stopping read data timer：After Disposing interval disposable: $mReadDataDisposable")
     }
 
-
-    fun startReadDataTimer() {
-        LogUtils.d(logTag, "startReadDataTimer")
-        mReadDataDisposable = Flowable.interval(10,
-            TimeUnit.MILLISECONDS,
-            Schedulers.from(DJIExecutor.getExecutor()))
-            .doOnNext { readData() }
-            .doOnCancel { LogUtils.e(logTag, "OnCancel") }
-            .doOnTerminate { LogUtils.e(logTag, "OnTerminate") }
-            .doOnError { throwable: Throwable -> LogUtils.e(logTag, "OnError:" + throwable.localizedMessage) }
-            .doOnComplete { LogUtils.i(logTag, "OnComplete") }
-            .subscribe()
-    }
 
     fun stopMop() {
         if (!isStop) {

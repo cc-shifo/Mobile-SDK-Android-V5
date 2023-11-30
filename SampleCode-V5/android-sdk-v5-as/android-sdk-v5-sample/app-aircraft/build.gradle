@@ -21,15 +21,11 @@ android {
 
     //配置签名信息
     signingConfigs {
-        config {
-            // storeFile file(project.STORE_FILE)
-            // storePassword project.STORE_PASSWORD
-            // keyAlias project.KEY_ALIAS
-            // keyPassword project.KEY_PASSWORD
-            keyAlias 'key0'
-            keyPassword '123456'
-            storeFile file('../../123456.jks')
-            storePassword '123456'
+        release {
+            storeFile file(project.STORE_FILE)
+            storePassword project.STORE_PASSWORD
+            keyAlias project.KEY_ALIAS
+            keyPassword project.KEY_PASSWORD
         }
     }
 
@@ -37,16 +33,15 @@ android {
         release {
             minifyEnabled true
             shrinkResources false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
                     '../../android-sdk-v5-as/proguard-relative/sample.pro'
-            signingConfig signingConfigs.config
         }
         debug {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
                     '../../android-sdk-v5-as/proguard-relative/sample.pro'
-            signingConfig signingConfigs.config
         }
     }
 
@@ -64,6 +59,7 @@ android {
 
     kotlinOptions{
         jvmTarget = JavaVersion.VERSION_1_8
+        freeCompilerArgs += ["-Xjvm-default=all"]
     }
 
     //关闭lint

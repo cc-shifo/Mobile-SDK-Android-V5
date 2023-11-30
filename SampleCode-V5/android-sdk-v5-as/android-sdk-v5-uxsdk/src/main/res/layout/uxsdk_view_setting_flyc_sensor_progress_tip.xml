@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+    <!--        android:text="@string/setting_ui_redundancy_sensor_imu_desc_cur_use"-->
+    <TextView
+        style="@style/uxsdk_setting_ui_item_txt"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/setting_flyc_sensor_tip_view_inuse_margin_end"
+        android:drawableStart="@drawable/uxsdk_setting_ui_flyc_circle_selected"
+        android:drawablePadding="@dimen/setting_flyc_sensor_calibrate_view_text_drawable_padding"
+        android:textSize="@dimen/setting_flyc_sensor_progress_tip_text_size" />
+
+    <!--        android:text="@string/setting_ui_redundancy_sensor_imu_desc_good"-->
+    <TextView
+        style="@style/uxsdk_setting_ui_item_txt"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/setting_flyc_sensor_tip_view_text_progress_space"
+        android:textSize="@dimen/setting_flyc_sensor_progress_tip_text_size" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/setting_flyc_sensor_tip_progress_width"
+        android:layout_height="@dimen/setting_flyc_sensor_tip_progress_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/setting_flyc_sensor_tip_view_text_progress_item_space"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/uxsdk_setting_ui_status_pgb_green" />
+
+    <!--        android:text="@string/setting_ui_redundancy_sensor_imu_desc_normal"-->
+    <TextView
+        style="@style/uxsdk_setting_ui_item_txt"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/setting_flyc_sensor_tip_view_text_progress_space"
+        android:textSize="@dimen/setting_flyc_sensor_progress_tip_text_size" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/setting_flyc_sensor_tip_progress_width"
+        android:layout_height="@dimen/setting_flyc_sensor_tip_progress_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/setting_flyc_sensor_tip_view_text_progress_item_space"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/uxsdk_setting_ui_status_pgb_yellow" />
+
+    <!--        android:text="@string/setting_ui_redundancy_sensor_imu_desc_bad"-->
+    <TextView
+        style="@style/uxsdk_setting_ui_item_txt"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/setting_flyc_sensor_tip_view_text_progress_space"
+        android:textSize="@dimen/setting_flyc_sensor_progress_tip_text_size" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/setting_flyc_sensor_tip_progress_width"
+        android:layout_height="@dimen/setting_flyc_sensor_tip_progress_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/setting_flyc_sensor_tip_view_text_progress_item_space"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/uxsdk_setting_ui_status_pgb_red" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
