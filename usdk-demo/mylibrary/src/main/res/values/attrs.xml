@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="FlightModeWidget">
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <attr name="uxsdk_onStateChange" format="reference" />
+
+    <declare-styleable name="SystemStatusWidget" tools:ignore="ResourceName">
+        <attr name="uxsdk_systemStatusMessageTextAppearance" format="reference" />
+        <attr name="uxsdk_systemStatusMessageTextSize" format="dimension" />
+        <attr name="uxsdk_systemStatusMessageErrorTextColor" format="color" />
+        <attr name="uxsdk_systemStatusMessageWarningTextColor" format="color" />
+        <attr name="uxsdk_systemStatusMessageGoodTextColor" format="color" />
+        <attr name="uxsdk_systemStatusMessageOfflineTextColor" format="color" />
+        <attr name="uxsdk_systemStatusErrorBackgroundDrawable" format="reference" />
+        <attr name="uxsdk_systemStatusWarningBackgroundDrawable" format="reference" />
+        <attr name="uxsdk_systemStatusGoodBackgroundDrawable" format="reference" />
+        <attr name="uxsdk_systemStatusOfflineBackgroundDrawable" format="reference" />
+        <attr name="uxsdk_defaultMode" format="enum">
+            <enum name="color" value="0" />
+            <enum name="gradient" value="1" />
+        </attr>
+        <!-- Insert ID of the spotlight widget that needs to react to a state change on this widget.
+        See {@link dji.v5.ux.core.widget.systemstatus.SystemStatusWidget.setStateChangeCallback}
+        and {@link dji.ux.beta.core.panelwidget.systemstatus.SystemStatusListPanelWidget}. -->
+        <attr name="uxsdk_onStateChange" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FlightModeWidget" tools:ignore="ResourceName">
         <attr name="uxsdk_textAppearance" format="reference" />
         <attr name="uxsdk_textBackground" format="reference" />
         <attr name="uxsdk_textSize" format="dimension" />

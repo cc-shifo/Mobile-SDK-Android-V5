@@ -4,7 +4,32 @@
     <color name="uxsdk_background">#33ffffff</color>
 
     <color name="uxsdk_white">#FFFFFF</color>
+    <color name="uxsdk_white_80_percent">#CCFFFFFF</color>
 
+    <color name="uxsdk_red">#ff0000</color>
+    <color name="uxsdk_red_material_700">#CB1A1A</color>
+    <color name="uxsdk_red_material_700_transparent">#00CB1A1A</color>
+
+    <color name="uxsdk_green">#ff3fc14d</color>
+    <color name="uxsdk_green_material_400">#61BD17</color>
+    <color name="uxsdk_green_material_400_transparent">#0061BD17</color>
+
+    <color name="uxsdk_light_gray_800">#474747</color>
+    <color name="uxsdk_light_gray_800_transparent">#00474747</color>
+
+    <color name="uxsdk_green_500">#0AEE8B</color>
+    <color name="uxsdk_red_500">#E70102</color>
     <color name="uxsdk_gray_58">#959595</color>
+    <color name="uxsdk_gray_60">#9B9B9B</color>
 
+    <color name="uxsdk_yellow">#FFC000</color>
+    <color name="uxsdk_yellow_transparent">#00FFC000</color>
+
+    <!-- System Status Widget-->
+    <color name="uxsdk_status_good">@color/uxsdk_green_500</color>
+    <color name="uxsdk_status_normal">@color/uxsdk_white</color>
+    <color name="uxsdk_status_warning">#ff9d00</color>
+    <color name="uxsdk_status_error">@color/uxsdk_red_500</color>
+    <color name="uxsdk_status_offline">@color/uxsdk_gray_60</color>
+    <color name="uxsdk_status_edit_text_color">#1fa3f6</color>
 </resources>

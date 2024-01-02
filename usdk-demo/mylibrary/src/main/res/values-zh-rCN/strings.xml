@@ -28,4 +28,7 @@
     <string name="uxsdk_storage_status_needs_formatting">需要格式化</string>
     <string name="uxsdk_storage_status_remaining_space_mb">%1$d MB</string>
     <string name="uxsdk_storage_status_remaining_space_gb">%1$.2f GB</string>
+
+    <!-- System Status Widget-->
+    <string name="uxsdk_max_flight_height_limit">最大飞行高度： %1$s</string>
 </resources>
