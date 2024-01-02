@@ -13,13 +13,13 @@
         android:layout_marginBottom="@dimen/uxsdk_20_dp"
         android:src="@drawable/uxsdk_setting_ui_vision_precise_landing" />
 
-    <!--        android:text="@string/setting_menu_desc_perception_precision_landing"-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/uxsdk_20_dp"
         android:layout_marginTop="@dimen/uxsdk_19_dp"
         android:layout_toRightOf="@id/setting_menu_perception_pic_return"
+        android:text="@string/setting_menu_desc_perception_precision_landing"
         android:textColor="@color/uxsdk_dic_color_c24_white_Transparent6"
         android:textSize="@dimen/uxsdk_setting_perception_icon_text_size" />
 </RelativeLayout>

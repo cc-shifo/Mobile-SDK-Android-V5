@@ -7,13 +7,13 @@
 
     <View style="@style/uxsdk_setting_circle"/>
 
-    <!--        android:text="@string/setting_ui_imu_prepare_desc2"-->
     <TextView
         android:id="@+id/setting_ui_imucal_desc_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:lineSpacingExtra="7dp"
+        android:text="@string/setting_ui_imu_prepare_desc2"
         android:textColor="@color/uxsdk_white"
         android:textSize="14dp" />
 

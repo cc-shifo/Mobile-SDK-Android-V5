@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <!--app:uxsdk_summary="@string/setting_menu_summary_perception_precision_landing"-->
     <dji.v5.ux.core.base.SwitcherCell
         android:id="@+id/omni_common_precision_landing"
         android:layout_width="match_parent"
@@ -14,7 +13,7 @@
         android:layout_marginTop="@dimen/uxsdk_setting_perception_switcher_margin_top"
         android:tag="setting:multi_rc:toast"
         app:uxsdk_bottomDividerEnable="false"
-         />
+        app:uxsdk_summary="@string/setting_menu_summary_perception_precision_landing" />
 
     <include
         android:id="@+id/omni_common_precision_landing_desc"

@@ -161,7 +161,6 @@ public class TextCell extends DividerConstraintLayout {
             mSummary.setVisibility(GONE);
         }
 
-        // if (ta.hasValue(R.styleable.TextCell_uxsdk_text_cell_summaryColor)) {
         if (ta.hasValue(R.styleable.TextCell_uxsdk_text_cell_summaryColor)) {
             mSummary.setTextColor(ta.getColor(R.styleable.TextCell_uxsdk_text_cell_summaryColor, ContextCompat.getColor(getContext(), R.color.uxsdk_dic_color_c24_white_Transparent6)));
         }

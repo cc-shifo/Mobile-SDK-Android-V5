@@ -155,14 +155,14 @@
         android:visibility="gone"
         app:constraint_referenced_ids="setting_ui_flyc_acc_2_title,setting_ui_flyc_imu_acc_3,setting_ui_flyc_imu_gyr_3"/>
 
-    <!--<include-->
-    <!--    android:id="@+id/setting_ui_flyc_sensor_progress_tip_layout"-->
-    <!--    layout="@layout/uxsdk_view_setting_flyc_sensor_progress_tip"-->
-    <!--    android:layout_width="wrap_content"-->
-    <!--    android:layout_height="wrap_content"-->
-    <!--    android:layout_gravity="center_horizontal"-->
-    <!--    android:layout_marginTop="@dimen/setting_flyc_sensor_imu_tip_margin_top"-->
-    <!--    app:layout_constraintTop_toBottomOf="@+id/setting_ui_flyc_acc_2_title"/>-->
+    <include
+        android:id="@+id/setting_ui_flyc_sensor_progress_tip_layout"
+        layout="@layout/uxsdk_view_setting_flyc_sensor_progress_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/setting_flyc_sensor_imu_tip_margin_top"
+        app:layout_constraintTop_toBottomOf="@+id/setting_ui_flyc_acc_2_title"/>
 
     <View
         android:id="@+id/setting_menu_sensor_divider_1"

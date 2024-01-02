@@ -52,12 +52,11 @@
             android:layout_marginRight="@dimen/uxsdk_50_dp" />
     </LinearLayout>
 
-    <!--android:text="@string/setting_ui_rc_calibration_stick_desc"-->
     <TextView
         android:id="@+id/tv_rc_calibration_des"
         style="@style/setting_ui_txt_gray"
         android:layout_marginLeft="@dimen/uxsdk_30_dp"
         android:layout_marginRight="@dimen/uxsdk_30_dp"
         android:layout_marginBottom="@dimen/uxsdk_20_dp"
-         />
+        android:text="@string/setting_ui_rc_calibration_stick_desc" />
 </dji.v5.ux.remotecontroller.calibration.stick.StickCalibrationView>

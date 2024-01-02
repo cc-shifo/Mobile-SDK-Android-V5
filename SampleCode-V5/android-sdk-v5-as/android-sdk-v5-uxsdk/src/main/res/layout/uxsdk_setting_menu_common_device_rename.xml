@@ -10,11 +10,11 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/uxsdk_16_dp">
 
-        <!--            android:text="@string/setting_common_device_name"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:text="@string/setting_common_device_name"
             android:textColor="@color/uxsdk_white"
             android:textSize="@dimen/uxsdk_14_dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +36,6 @@
     </dji.v5.ux.core.base.DividerConstraintLayout>
 
 
-    <!--android:text="@string/setting_common_save"-->
     <TextView
         android:id="@+id/setting_menu_common_save_tv"
         style="@style/setting_ui_item_btn_big"
@@ -44,6 +43,6 @@
         android:gravity="center"
         android:paddingTop="@dimen/uxsdk_12_dp"
         android:paddingBottom="@dimen/uxsdk_12_dp"
-         />
+        android:text="@string/setting_common_save" />
 
 </RelativeLayout>

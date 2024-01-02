@@ -13,19 +13,17 @@
         android:paddingStart="@dimen/uxsdk_16_dp"
         android:paddingEnd="@dimen/uxsdk_16_dp">
 
-        <!--app:uxsdk_text_cell_title="@string/setting_menu_common_aircraft_version"-->
         <dji.v5.ux.core.base.TextCell
             android:id="@+id/common_menu_fc_version"
             android:layout_width="match_parent"
             android:layout_height="@dimen/uxsdk_58_dp"
-             />
+            app:uxsdk_text_cell_title="@string/setting_menu_common_aircraft_version" />
 
-        <!--app:uxsdk_text_cell_title="@string/setting_menu_common_rc_version"-->
         <dji.v5.ux.core.base.TextCell
             android:id="@+id/common_menu_rc_version"
             android:layout_width="match_parent"
             android:layout_height="@dimen/uxsdk_58_dp"
-             />
+            app:uxsdk_text_cell_title="@string/setting_menu_common_rc_version" />
 
 
         <LinearLayout
@@ -65,27 +63,24 @@
             android:orientation="vertical" />
 
 
-        <!--app:uxsdk_text_cell_title="@string/setting_menu_common_flyc_serial"-->
         <dji.v5.ux.core.base.SerialNumberTextCell
             android:id="@+id/common_menu_flyc_serial"
             android:layout_width="match_parent"
             android:layout_height="@dimen/uxsdk_58_dp"
-             />
+            app:uxsdk_text_cell_title="@string/setting_menu_common_flyc_serial" />
 
-        <!--app:uxsdk_text_cell_title="@string/setting_menu_common_rc_serial"-->
         <dji.v5.ux.core.base.TextCell
             android:id="@+id/common_menu_rc_serial"
             android:layout_width="match_parent"
             android:layout_height="@dimen/uxsdk_58_dp"
-            app:uxsdk_text_cell_content="@string/uxsdk_not_a_num"
-             />
+            app:uxsdk_text_cell_content="@string/not_a_num"
+            app:uxsdk_text_cell_title="@string/setting_menu_common_rc_serial" />
 
-        <!--app:uxsdk_text_cell_title="@string/setting_menu_common_rtk_module_serial"-->
         <dji.v5.ux.core.base.TextCell
             android:id="@+id/common_menu_rtk_serial"
             android:layout_width="match_parent"
             android:layout_height="@dimen/uxsdk_58_dp"
             android:visibility="gone"
-             />
+            app:uxsdk_text_cell_title="@string/setting_menu_common_rtk_module_serial" />
     </LinearLayout>
 </ScrollView>

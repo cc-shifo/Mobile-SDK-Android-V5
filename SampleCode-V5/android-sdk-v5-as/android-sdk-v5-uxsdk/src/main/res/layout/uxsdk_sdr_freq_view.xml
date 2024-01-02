@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <!--        android:text="@string/setting_ui_hd_sdr_custom_selected_tip"-->
     <TextView
         android:id="@+id/sdr_custom_alert_tip"
         style="@style/uxsdk_setting_ui_item_txt"
+        android:text="@string/setting_ui_hd_sdr_custom_selected_tip"
         android:gravity="top"
         android:textSize="@dimen/uxsdk_dic_text_size_16sp"
         android:textColor="@android:color/darker_gray"/>
@@ -122,13 +122,12 @@
         android:gravity="center"
         android:layout_centerHorizontal="true">
 
-        <!--android:text="@string/setting_ui_hd_sdr_mincolor_desc"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:textColor="@android:color/white"
-            />
+            android:text="@string/setting_ui_hd_sdr_mincolor_desc"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -137,20 +136,19 @@
             android:layout_marginRight="@dimen/uxsdk_15_dp"
             android:src="@drawable/uxsdk_freq_value_range_line"/>
 
-        <!--android:text="@string/setting_ui_hd_sdr_maxcolor_desc"-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:textColor="@android:color/white"
-            />
+            android:text="@string/setting_ui_hd_sdr_maxcolor_desc"/>
 
     </LinearLayout>
 
-    <!--        android:text="@string/setting_ui_hd_sdr_channel_select_tip"-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/setting_ui_hd_sdr_channel_select_tip"
         android:layout_marginTop="@dimen/uxsdk_15_dp"
         android:layout_below="@id/sdr_quality_tip"
         android:textSize="12sp"

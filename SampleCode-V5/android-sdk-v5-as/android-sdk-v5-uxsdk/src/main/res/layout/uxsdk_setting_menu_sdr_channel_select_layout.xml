@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <!--        app:uxsdk_summary="@string/setting_menu_title_hd_channel_mode"-->
     <dji.v5.ux.core.base.TabSelectCell
         android:id="@+id/tsc_setting_menu_channel_select_tab_cell"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:uxsdk_bottomDividerEnable="false"
         app:uxsdk_select="0"
+        app:uxsdk_summary="@string/setting_menu_title_hd_channel_mode"
         app:uxsdk_tabs="@array/uxsdk_hd_channel_mode"/>
 
     <TextView

@@ -175,7 +175,7 @@ var ImageView.imageDrawable: Drawable?
  * @param dialogClickListener
  */
 fun View.showAlertDialog(
-    @StyleRes dialogTheme: Int = androidx.appcompat.R.style.Theme_AppCompat_Dialog,
+    @StyleRes dialogTheme: Int = R.style.Theme_AppCompat_Dialog,
     title: String? = getString(R.string.uxsdk_alert),
     icon: Drawable? = null,
     message: String? = null,
@@ -286,15 +286,6 @@ fun View.setBorder(
     )
     this.background = layerDrawable
 
-}
-
-/**
- * android 12以上场景会有opengl崩溃，部分图传相关的ui先暂时关闭该功能。
- */
-fun View.disableHardwareAccelerated() {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-        setLayerType(View.LAYER_TYPE_NONE, null)
-    }
 }
 
 /**

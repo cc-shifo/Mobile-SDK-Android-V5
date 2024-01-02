@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <!--        app:uxsdk_summary="@string/setting_menu_title_hd_frequency"-->
     <dji.v5.ux.core.base.TabSelectCell
         android:id="@+id/tsc_setting_menu_hd_frequency_tab_cell"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:uxsdk_bottomDividerEnable="false"
         app:uxsdk_select="0"
+        app:uxsdk_summary="@string/setting_menu_title_hd_frequency"
         app:uxsdk_tabs="@array/uxsdk_sdr_frequency_names" />
 
     <TextView
