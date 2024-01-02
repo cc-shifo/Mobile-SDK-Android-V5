@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- text size -->
+    <dimen name="uxsdk_text_size_large_2">22sp</dimen>
+    <dimen name="uxsdk_text_size_large">20sp</dimen>
+    <dimen name="uxsdk_text_size_15sp">15sp</dimen>
+    <dimen name="uxsdk_text_size_13sp">13sp</dimen>
+    <dimen name="uxsdk_text_size_medium_large">18sp</dimen>
+    <dimen name="uxsdk_text_size_medium">16sp</dimen>
+    <dimen name="uxsdk_text_size_normal_medium">14sp</dimen>
+    <dimen name="uxsdk_text_size_normal">12sp</dimen>
+    <dimen name="uxsdk_text_size_small">10sp</dimen>
+    <dimen name="uxsdk_text_size_between_small_tiny">8sp</dimen>
+    <dimen name="uxsdk_text_size_tiny">6sp</dimen>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uxsdk_app_ok">OK</string>
+    <string name="uxsdk_app_cancel">Cancel</string>
+    <string name="uxsdk_alert">Alert</string>
+
+
+    <string name="uxsdk_string_default_value">N/A</string>
+
+    <!-- Telemetry widgets -->
+    <string name="uxsdk_unit_meters">m</string>
+    <string name="uxsdk_unit_feet">ft</string>
+    <string name="uxsdk_value_meters">%1$s m</string>
+    <string name="uxsdk_value_feet">%1$s ft</string>
+    <string name="uxsdk_unit_meter_per_second">m/s</string>
+    <string name="uxsdk_unit_km_per_hr">km/h</string>
+    <string name="uxsdk_unit_mile_per_hr">mph</string>
+    <string name="uxsdk_altitude_title">H</string>
+    <string name="uxsdk_agl_title">H AGL</string>
+    <string name="uxsdk_amsl_altitude_title">H AMSL</string>
+    <string name="uxsdk_distance_home_title">D</string>
+    <string name="uxsdk_distance_rc_title">DRC</string>
+    <string name="uxsdk_vps_title">VPS</string>
+    <string name="uxsdk_horizontal_velocity_title">H.S.</string>
+    <string name="uxsdk_vertical_velocity_title">V.S.</string>
+
+    <string name="uxsdk_storage_status_needs_formatting">Formatting Required</string>
+    <string name="uxsdk_storage_status_remaining_space_mb">%1$d MB</string>
+    <string name="uxsdk_storage_status_remaining_space_gb">%1$.2f GB</string>
+</resources>

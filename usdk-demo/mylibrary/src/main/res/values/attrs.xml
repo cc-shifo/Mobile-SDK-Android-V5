@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlightModeWidget">
+        <attr name="uxsdk_textAppearance" format="reference" />
+        <attr name="uxsdk_textBackground" format="reference" />
+        <attr name="uxsdk_textSize" format="dimension" />
+        <attr name="uxsdk_icon" format="reference" />
+        <attr name="uxsdk_iconDimensionRatio" format="string|reference" />
+        <attr name="uxsdk_iconBackground" format="reference"/>
+        <attr name="uxsdk_connectedStateIconColor" format="color"/>
+        <attr name="uxsdk_disconnectedStateIconColor" format="color"/>
+        <attr name="uxsdk_connectedStateTextColor" format="color" />
+        <attr name="uxsdk_disconnectedStateTextColor" format="color" />
+    </declare-styleable>
+</resources>

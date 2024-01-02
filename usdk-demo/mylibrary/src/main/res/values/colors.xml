@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="uxsdk_transparent">#00000000</color>
+    <color name="uxsdk_background">#33ffffff</color>
+
+    <color name="uxsdk_white">#FFFFFF</color>
+
+    <color name="uxsdk_gray_58">#959595</color>
+
+</resources>
