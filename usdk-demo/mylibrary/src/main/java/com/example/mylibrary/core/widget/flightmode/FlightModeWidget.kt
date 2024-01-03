@@ -54,9 +54,9 @@ private const val TAG = "FlightModeWidget"
  * Shows the current flight mode next to a flight mode icon.
  */
 open class FlightModeWidget @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
 ) : ConstraintLayoutWidget<FlightModeWidget.ModelState>(context, attrs, defStyleAttr) {
 
     //region Fields
@@ -64,8 +64,9 @@ open class FlightModeWidget @JvmOverloads constructor(
     private val flightModeTextView: TextView = findViewById(R.id.textview_flight_mode_string)
     private val widgetModel by lazy {
         FlightModeWidgetModel(
-                DJISDKModel.getInstance(),
-                ObservableInMemoryKeyedStore.getInstance())
+            DJISDKModel.getInstance(),
+            ObservableInMemoryKeyedStore.getInstance()
+        )
     }
 
     /**
@@ -174,11 +175,15 @@ open class FlightModeWidget @JvmOverloads constructor(
 
     override fun reactToModelChanges() {
         addReaction(widgetModel.flightModeState
-                .observeOn(SchedulerProvider.ui())
-                .subscribe { this.updateUI(it) })
+            .observeOn(SchedulerProvider.ui())
+            .subscribe { this.updateUI(it) })
         addReaction(widgetModel.productConnection
-                .observeOn(SchedulerProvider.ui())
-                .subscribe { widgetStateDataProcessor.onNext(ModelState.ProductConnected(it)) })
+            .observeOn(SchedulerProvider.ui())
+            .subscribe {
+                if (!it) {
+                    this.updateUI(FlightModeWidgetModel.FlightModeState.ProductDisconnected)
+                }
+            })
 
     }
     //endregion
@@ -204,8 +209,12 @@ open class FlightModeWidget @JvmOverloads constructor(
     private fun checkAndUpdateUI() {
         if (!isInEditMode) {
             addDisposable(widgetModel.flightModeState
-                    .observeOn(SchedulerProvider.ui())
-                    .subscribe(Consumer { this.updateUI(it) }, RxUtil.logErrorConsumer(TAG, "Update UI ")))
+                .observeOn(SchedulerProvider.ui())
+                .subscribe(
+                    Consumer { this.updateUI(it) },
+                    RxUtil.logErrorConsumer(TAG, "Update UI ")
+                )
+            )
         }
     }
     //endregion
@@ -214,9 +223,11 @@ open class FlightModeWidget @JvmOverloads constructor(
     override fun getIdealDimensionRatioString(): String? = null
 
     override val widgetSizeDescription: WidgetSizeDescription =
-            WidgetSizeDescription(WidgetSizeDescription.SizeType.OTHER,
-                    widthDimension = WidgetSizeDescription.Dimension.WRAP,
-                    heightDimension = WidgetSizeDescription.Dimension.EXPAND)
+        WidgetSizeDescription(
+            WidgetSizeDescription.SizeType.OTHER,
+            widthDimension = WidgetSizeDescription.Dimension.WRAP,
+            heightDimension = WidgetSizeDescription.Dimension.EXPAND
+        )
 
     /**
      * Set text appearance of the flight mode text view
@@ -289,8 +300,9 @@ open class FlightModeWidget @JvmOverloads constructor(
             }
             typedArray.getDrawableAndUse(R.styleable.FlightModeWidget_uxsdk_icon) {
                 val flightModeIconDimensionRatio = typedArray.getString(
-                        R.styleable.FlightModeWidget_uxsdk_iconDimensionRatio,
-                        getString(R.string.uxsdk_icon_flight_mode_ratio))
+                    R.styleable.FlightModeWidget_uxsdk_iconDimensionRatio,
+                    getString(R.string.uxsdk_icon_flight_mode_ratio)
+                )
                 setIcon(it, flightModeIconDimensionRatio)
             }
             typedArray.getDrawableAndUse(R.styleable.FlightModeWidget_uxsdk_iconBackground) {

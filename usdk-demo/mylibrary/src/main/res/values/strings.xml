@@ -31,4 +31,19 @@
     <!-- System Status Widget-->
     <string name="uxsdk_max_flight_height_limit">Max Flight Altitude: %1$s</string>
 
+    <!--gps rtk widget-->
+    <string name="uxsdk_rtk_solution_none">NONE</string>
+    <string name="uxsdk_rtk_solution_single">SINGLE</string>
+    <string name="uxsdk_rtk_solution_float">FLOAT</string>
+    <string name="uxsdk_rtk_solution_fixed">FIX</string>
+    <string name="uxsdk_rtk_solution_unknown">UNKNOWN</string>
+    <string name="uxsdk_rtk_setting_menu_setting_fail">Setting failed</string>
+    <string name="uxsdk_rtk_setting_menu_customer_rtk_save_failed_tips">Setting failed,possible reasons:\n1. Input parameter incorrect. Check input parameter\n2. Account expired. Check if account is valid\n3. Not network connection. Check network connection status\n4. Server error. Contact RTK supplier to check server status</string>
+    <string name="uxsdk_rtk_type_unknown_rtk">Unknown RTK</string>
+    <string name="uxsdk_rtk_type_nrtk">Network RTK</string>
+    <string name="uxsdk_rtk_type_rtk_mobile_station">D-RTK 2 Mobile Station</string>
+    <string name="uxsdk_rtk_type_rtk_base_station">Base Station</string>
+    <string name="uxsdk_rtk_type_custom_rtk">Custom Network RTK</string>
+    <string name="uxsdk_rtk_type_cmcc_rtk">CMCC RTK</string>
+
 </resources>

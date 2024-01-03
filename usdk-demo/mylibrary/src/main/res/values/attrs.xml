@@ -36,4 +36,22 @@
         <attr name="uxsdk_connectedStateTextColor" format="color" />
         <attr name="uxsdk_disconnectedStateTextColor" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="RemoteControllerSignalWidget" tools:ignore="ResourceName">
+        <attr name="uxsdk_rcIcon" format="reference" />
+        <attr name="uxsdk_rcSignalIcon" format="reference" />
+        <attr name="uxsdk_rcConnectedStateIconColor" format="color" />
+        <attr name="uxsdk_rcDisconnectedStateIconColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="VideoSignalWidget" tools:ignore="ResourceName">
+        <attr name="uxsdk_videoIcon" format="reference" />
+        <attr name="uxsdk_videoSignalIcon" format="reference" />
+        <attr name="uxsdk_frequencyBandTextAppearance" format="reference" />
+        <attr name="uxsdk_frequencyBandTextSize" format="dimension" />
+        <attr name="uxsdk_frequencyBandTextColor" format="color" />
+        <attr name="uxsdk_frequencyBandBackgroundDrawable" format="reference" />
+        <attr name="uxsdk_videoConnectedStateIconColor" format="color"/>
+        <attr name="uxsdk_videoDisconnectedStateIconColor" format="color"/>
+    </declare-styleable>
 </resources>

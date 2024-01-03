@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dji.sdk.keyvalue.key.DJIKey;
+import dji.sdk.keyvalue.key.FlightControllerKey;
 import dji.sdk.keyvalue.key.KeyTools;
 import dji.sdk.keyvalue.key.ProductKey;
 import dji.v5.utils.common.LogUtils;
@@ -180,8 +181,11 @@ public abstract class WidgetModel {
     }
 
     private void initializeConnection() {
-        DJIKey<Boolean> productConnectionKey = KeyTools.createKey(ProductKey.KeyConnection);
-        bindDataProcessor(productConnectionKey, productConnectionProcessor, newValue -> onProductConnectionChanged((boolean) newValue));
+        // ProductKey.KeyConnection在M350上有bug。无人机没打开，值可能返回true。
+        // DJIKey<Boolean> productConnectionKey = KeyTools.createKey(ProductKey.KeyConnection);
+        // bindDataProcessor(productConnectionKey, productConnectionProcessor, newValue -> onProductConnectionChanged((boolean) newValue));
+        DJIKey<Boolean> productConKey = KeyTools.createKey(FlightControllerKey.KeyConnection);
+        bindDataProcessor(productConKey, productConnectionProcessor, newValue -> onProductConnectionChanged((boolean) newValue));
     }
 
     protected void onProductConnectionChanged(boolean isConnected) {

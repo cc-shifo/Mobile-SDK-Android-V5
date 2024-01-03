@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="uxsdk_widget_default_ratio" translatable="false">W,1:1</string>
     <string name="uxsdk_icon_flight_mode_ratio" translatable="false">W,1:1</string>
+    <string name="uxsdk_widget_remote_control_signal_ratio" translatable="false">W,19:11</string>
+    <string name="uxsdk_widget_video_signal_ratio" translatable="false">W,19:11</string>
 
 </resources>

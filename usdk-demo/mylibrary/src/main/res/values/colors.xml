@@ -7,23 +7,29 @@
     <color name="uxsdk_white_80_percent">#CCFFFFFF</color>
 
     <color name="uxsdk_red">#ff0000</color>
+    <color name="uxsdk_red_in_dark">#E41F29</color>
     <color name="uxsdk_red_material_700">#CB1A1A</color>
     <color name="uxsdk_red_material_700_transparent">#00CB1A1A</color>
+    <color name="uxsdk_red_500">#E70102</color>
 
     <color name="uxsdk_green">#ff3fc14d</color>
     <color name="uxsdk_green_material_400">#61BD17</color>
     <color name="uxsdk_green_material_400_transparent">#0061BD17</color>
+    <color name="uxsdk_green_in_dark">#FF00EE8B</color>
+    <color name="uxsdk_green_500">#0AEE8B</color>
 
     <color name="uxsdk_light_gray_800">#474747</color>
     <color name="uxsdk_light_gray_800_transparent">#00474747</color>
 
-    <color name="uxsdk_green_500">#0AEE8B</color>
-    <color name="uxsdk_red_500">#E70102</color>
     <color name="uxsdk_gray_58">#959595</color>
     <color name="uxsdk_gray_60">#9B9B9B</color>
 
     <color name="uxsdk_yellow">#FFC000</color>
     <color name="uxsdk_yellow_transparent">#00FFC000</color>
+    <color name="uxsdk_zone_warning_enhanced">#ee8815</color>
+
+    <color name="uxsdk_black">#000000</color>
+    <color name="uxsdk_black_95_percent">#F2000000</color>
 
     <!-- System Status Widget-->
     <color name="uxsdk_status_good">@color/uxsdk_green_500</color>
@@ -32,4 +38,15 @@
     <color name="uxsdk_status_error">@color/uxsdk_red_500</color>
     <color name="uxsdk_status_offline">@color/uxsdk_gray_60</color>
     <color name="uxsdk_status_edit_text_color">#1fa3f6</color>
+
+    <!--GPS Widget-->
+    <!-- 错误提示 -->
+    <color name="uxsdk_tips_danger_in_dark">@color/uxsdk_red_in_dark</color>
+    <!-- 警告提示-->
+    <color name="uxsdk_tips_caution_in_dark">@color/uxsdk_zone_warning_enhanced</color>
+    <!-- 成功提示-->
+    <color name="uxsdk_tips_success_in_dark">@color/uxsdk_green_in_dark</color>
+    <color name="uxsdk_success_theme_dark">#FF34DE5D</color>
+    <!-- 正常提示 -->
+    <color name="uxsdk_tips_normal_in_dark">@color/uxsdk_white</color>
 </resources>

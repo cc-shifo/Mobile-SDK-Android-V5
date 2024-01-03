@@ -31,4 +31,20 @@
 
     <!-- System Status Widget-->
     <string name="uxsdk_max_flight_height_limit">最大飞行高度： %1$s</string>
+
+    <!--gps rtk widget-->
+    <string name="uxsdk_rtk_solution_none">NONE</string>
+    <string name="uxsdk_rtk_solution_single">SINGLE</string>
+    <string name="uxsdk_rtk_solution_float">FLOAT</string>
+    <string name="uxsdk_rtk_solution_fixed">FIXED</string>
+    <string name="uxsdk_rtk_solution_unknown">未知</string>
+    <string name="uxsdk_rtk_setting_menu_setting_fail">设置失败</string>
+    <string name="uxsdk_rtk_setting_menu_customer_rtk_save_failed_tips">保存失败，可能原因：\n1.输入参数不正确，请检查输入参数\n2.账号过期，请确认账号是否有效\n3.无网络，请检查网络连接状态\n4.服务器故障，请联系RTK供应商确认服务器状态</string>
+    <string name="uxsdk_rtk_type_unknown_rtk">未知RTK类型</string>
+    <string name="uxsdk_rtk_type_nrtk">网络 RTK</string>
+    <string name="uxsdk_rtk_type_rtk_mobile_station">D-RTK 2 移动站</string>
+    <string name="uxsdk_rtk_type_rtk_base_station">基站</string>
+    <string name="uxsdk_rtk_type_custom_rtk">自定义网络 RTK</string>
+    <string name="uxsdk_rtk_type_cmcc_rtk">CMCC RTK</string>
+
 </resources>

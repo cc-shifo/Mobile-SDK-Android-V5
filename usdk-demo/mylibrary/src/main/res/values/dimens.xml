@@ -13,4 +13,12 @@
     <dimen name="uxsdk_text_size_between_small_tiny">8sp</dimen>
     <dimen name="uxsdk_text_size_tiny">6sp</dimen>
     <dimen name="uxsdk_system_status_text_size">13sp</dimen>
+
+
+    <dimen name="uxsdk_2_dp">2dp</dimen>
+    <dimen name="uxsdk_8_dp">8dp</dimen>
+    <dimen name="uxsdk_9_dp">9dp</dimen>
+    <dimen name="uxsdk_12_dp">12dp</dimen>
+    <dimen name="uxsdk_20_dp">20dp</dimen>
+
 </resources>
