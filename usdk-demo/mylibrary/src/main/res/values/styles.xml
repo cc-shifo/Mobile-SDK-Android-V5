@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 带描边的TextView默认样式-->
+    <style name="Widget.StrokeTextView" parent="Widget.AppCompat.TextView"
+        tools:ignore="ResourceName">
+        <item name="uxsdk_textStrokeWidth">@dimen/uxsdk_1_dp</item>
+        <item name="uxsdk_textStrokeColor">@color/uxsdk_black_30_percent</item>
+    </style>
+</resources>

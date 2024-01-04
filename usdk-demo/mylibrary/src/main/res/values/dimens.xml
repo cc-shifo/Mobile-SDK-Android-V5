@@ -15,10 +15,26 @@
     <dimen name="uxsdk_system_status_text_size">13sp</dimen>
 
 
+    <dimen name="uxsdk_1_dp">1dp</dimen>
     <dimen name="uxsdk_2_dp">2dp</dimen>
+    <dimen name="uxsdk_3_dp">3dp</dimen>
+    <dimen name="uxsdk_4_dp">4dp</dimen>
+    <dimen name="uxsdk_5_dp">5dp</dimen>
     <dimen name="uxsdk_8_dp">8dp</dimen>
     <dimen name="uxsdk_9_dp">9dp</dimen>
+    <dimen name="uxsdk_10_dp">10dp</dimen>
     <dimen name="uxsdk_12_dp">12dp</dimen>
+    <dimen name="uxsdk_15_dp">15dp</dimen>
+    <dimen name="uxsdk_16_dp">16dp</dimen>
     <dimen name="uxsdk_20_dp">20dp</dimen>
+    <dimen name="uxsdk_24_dp">24dp</dimen>
+    <dimen name="uxsdk_32_dp">32dp</dimen>
+    <dimen name="uxsdk_38_dp">38dp</dimen>
+    <dimen name="uxsdk_40_dp">40dp</dimen>
+    <dimen name="uxsdk_50_dp">50dp</dimen>
+    <dimen name="uxsdk_96_dp">96dp</dimen>
+    <dimen name="uxsdk_150_dp">150dp</dimen>
+    <dimen name="uxsdk_176_dp">176dp</dimen>
+    <dimen name="uxsdk_196_dp">196dp</dimen>
 
 </resources>

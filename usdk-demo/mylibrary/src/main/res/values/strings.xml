@@ -46,4 +46,8 @@
     <string name="uxsdk_rtk_type_custom_rtk">Custom Network RTK</string>
     <string name="uxsdk_rtk_type_cmcc_rtk">CMCC RTK</string>
 
+    <!--DeviceHealthAndStatusWidget-->
+    <string name="uxsdk_fpv_message_box_empty_content_v2">Normal</string>
+    <string name="uxsdk_fpv_tip_remote_disconnect">Aircraft not connected</string>
+
 </resources>

@@ -54,4 +54,13 @@
         <attr name="uxsdk_videoConnectedStateIconColor" format="color"/>
         <attr name="uxsdk_videoDisconnectedStateIconColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="StrokeTextView" tools:ignore="ResourceName">
+        <attr name="uxsdk_textStrokeWidth" format="dimension" />
+        <attr name="uxsdk_textStrokeColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="UXRecyclerView" tools:ignore="ResourceName">
+        <attr name="uxsdk_fadingEdgeColor" format="color" />
+    </declare-styleable>
 </resources>

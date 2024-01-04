@@ -5,18 +5,24 @@
 
     <color name="uxsdk_white">#FFFFFF</color>
     <color name="uxsdk_white_80_percent">#CCFFFFFF</color>
+    <color name="uxsdk_white_70_percent">#B3FFFFFF</color>
+    <color name="uxsdk_white_50_percent">#7FFFFFFF</color>
+    <color name="uxsdk_white_30_percent">#4DFFFFFF</color>
+    <color name="uxsdk_white_10_percent">#1AFFFFFF</color>
 
     <color name="uxsdk_red">#ff0000</color>
     <color name="uxsdk_red_in_dark">#E41F29</color>
     <color name="uxsdk_red_material_700">#CB1A1A</color>
     <color name="uxsdk_red_material_700_transparent">#00CB1A1A</color>
     <color name="uxsdk_red_500">#E70102</color>
+    <color name="uxsdk_red_in_dark_050">#80F5222D</color>
 
     <color name="uxsdk_green">#ff3fc14d</color>
     <color name="uxsdk_green_material_400">#61BD17</color>
     <color name="uxsdk_green_material_400_transparent">#0061BD17</color>
     <color name="uxsdk_green_in_dark">#FF00EE8B</color>
     <color name="uxsdk_green_500">#0AEE8B</color>
+    <color name="uxsdk_green_material_800_67_percent">#AA0BE315</color>
 
     <color name="uxsdk_light_gray_800">#474747</color>
     <color name="uxsdk_light_gray_800_transparent">#00474747</color>
@@ -28,8 +34,18 @@
     <color name="uxsdk_yellow_transparent">#00FFC000</color>
     <color name="uxsdk_zone_warning_enhanced">#ee8815</color>
 
+    <color name="uxsdk_orange_in_dark">#FFEE8815</color>
+    <color name="uxsdk_orange_in_dark_050">#FFEE8815</color>
+
+
     <color name="uxsdk_black">#000000</color>
     <color name="uxsdk_black_95_percent">#F2000000</color>
+    <color name="uxsdk_black_50_percent">#7F000000</color>
+    <color name="uxsdk_black_30_percent">#4C000000</color>
+    <color name="uxsdk_black_20_percent">#32000000</color>
+    <color name="uxsdk_fpv_popover_content_background_color">#F2141414</color>
+    <color name="uxsdk_fpv_popover_title_background_color">#F21F1F1F</color>
+    <color name="uxsdk_white_0_percent">#00FFFFFF</color>
 
     <!-- System Status Widget-->
     <color name="uxsdk_status_good">@color/uxsdk_green_500</color>
