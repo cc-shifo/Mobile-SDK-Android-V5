@@ -104,7 +104,7 @@ class GpsSignalWidget @JvmOverloads constructor(
     }
 
     private fun updateRtkIcon(overview: GpsSignalWidgetModel.RtkOverview) {
-        // ivRtkIcon.visibility = if (overview.connected) VISIBLE else GONE
+        ivRtkIcon.visibility = if (overview.connected) VISIBLE else GONE
 
         if (overview.enabled) {
             when {
