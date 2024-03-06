@@ -47,7 +47,7 @@ abstract class FrameLayoutWidget<T> @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
 ) : FrameLayout(context, attrs, defStyleAttr) {
-    protected val tag = LogUtils.getTag(this)
+    protected val tag = this::class.java.simpleName
 
     //region Fields
     private var reactionDisposables: CompositeDisposable? = null
