@@ -75,12 +75,12 @@ open class SystemStatusWidget @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : ConstraintLayoutWidget<ModelState>(context, attrs, defStyleAttr){
+) : ConstraintLayoutWidget<ModelState>(context, attrs, defStyleAttr) {
     //region Fields
     private val systemStatusTextView: TextView = findViewById(R.id.textview_system_status)
     private val systemStatusBackgroundImageView: ImageView = findViewById(R.id.imageview_system_status_background)
     private val blinkAnimation: Animation = AnimationUtils.loadAnimation(context, R.anim.uxsdk_anim_blink)
-    protected val uiUpdateStateProcessor: PublishProcessor<UIState> = PublishProcessor.create()
+    private val uiUpdateStateProcessor: PublishProcessor<UIState> = PublishProcessor.create()
 
     private val widgetModel by lazy {
         SystemStatusWidgetModel(
