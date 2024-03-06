@@ -1,21 +1,22 @@
 package com.example.mylibrary.core.ui.component
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.view.ContextThemeWrapper
 import android.widget.TextView
-import androidx.appcompat.view.ContextThemeWrapper
-import androidx.appcompat.widget.AppCompatTextView
 import com.example.mylibrary.R
 
 /**
  * 支持描边的TextView
  */
+@SuppressLint("AppCompatCustomView")
 open class StrokeTextView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : AppCompatTextView(ContextThemeWrapper(context, R.style.Widget_StrokeTextView), attrs, defStyleAttr) {
+) : TextView(context, attrs, defStyleAttr, R.style.Widget_StrokeTextView) {
 
     var strokeWidth: Float = 0F
     var strokeColor: Int = 0
@@ -48,6 +49,10 @@ open class StrokeTextView @JvmOverloads constructor(
     }
 
     override fun onDraw(canvas: Canvas?) {
+        if (isInEditMode) {
+            super.onDraw(canvas)
+            return
+        }
         onDrawingFlag = true
         val lastColor = textColors
         setTextColor(strokeColor)

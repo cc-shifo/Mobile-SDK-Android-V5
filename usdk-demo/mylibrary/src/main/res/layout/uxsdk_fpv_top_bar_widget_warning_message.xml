@@ -5,6 +5,7 @@
     android:layout_width="@dimen/uxsdk_150_dp"
     android:layout_height="match_parent"
     tools:background="@color/uxsdk_black_95_percent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
     android:id="@+id/warning_message_root_view"
     tools:layout_height="@dimen/uxsdk_38_dp">
 
@@ -28,7 +29,7 @@
             tools:text="1"
             android:textStyle="bold"
             android:textColor="@color/uxsdk_white"
-            android:textSize="@dimen/uxsdk_8_dp" />
+            android:textSize="@dimen/uxsdk_text_size_between_small_tiny" />
 
         <com.example.mylibrary.core.ui.component.StrokeTextView
             android:id="@+id/tv_level2_count"
@@ -38,10 +39,11 @@
             android:background="@color/uxsdk_orange_in_dark"
             android:gravity="center"
             android:singleLine="true"
-            tools:text="3"
-            android:textStyle="bold"
             android:textColor="@color/uxsdk_white"
-            android:textSize="@dimen/uxsdk_text_size_between_small_tiny" />
+            android:textSize="@dimen/uxsdk_text_size_between_small_tiny"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck"
+            tools:text="3" />
     </LinearLayout>
 
     <FrameLayout

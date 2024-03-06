@@ -34,8 +34,8 @@
     <color name="uxsdk_yellow_transparent">#00FFC000</color>
     <color name="uxsdk_zone_warning_enhanced">#ee8815</color>
 
-    <color name="uxsdk_orange_in_dark">#FFEE8815</color>
-    <color name="uxsdk_orange_in_dark_050">#FFEE8815</color>
+    <color name="uxsdk_orange_in_dark">#EE8815</color>
+    <color name="uxsdk_orange_in_dark_050">#80EE8815</color>
 
 
     <color name="uxsdk_black">#000000</color>
