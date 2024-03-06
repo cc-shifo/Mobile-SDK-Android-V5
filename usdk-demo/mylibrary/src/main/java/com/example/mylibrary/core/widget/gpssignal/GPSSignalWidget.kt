@@ -28,7 +28,7 @@ class GpsSignalWidget @JvmOverloads constructor(
     private val ivRtkIcon: ImageView = findViewById(R.id.iv_rtk_icon)
     private val ivSatelliteIcon: ImageView = findViewById(R.id.iv_satellite_icon)
     private val tvSatelliteCount: TextView = findViewById(R.id.tv_satellite_count)
-    private var rtkOverView: GpsSignalWidgetModel.RtkOverview = GpsSignalWidgetModel.RtkOverview()
+    private lateinit var rtkOverView: GpsSignalWidgetModel.RtkOverview
     private val rootView: ConstraintLayout = findViewById(R.id.root_view)
 
     private val rtkEnabledWidgetModel by lazy {
@@ -38,6 +38,7 @@ class GpsSignalWidget @JvmOverloads constructor(
         )
     }
 
+    // 不需要点击
     // private val popover by lazy {
     //     PopoverHelper.showPopover(rootView, GpsSignalPopoverView(context))
     // }
@@ -54,6 +55,10 @@ class GpsSignalWidget @JvmOverloads constructor(
     }
 
     init {
+        if (!isInEditMode) {
+            rtkOverView = GpsSignalWidgetModel.RtkOverview()
+        }
+        // 不需要点击
         // setOnClickListener {
         //     if (!popover.isShowing()) {
         //         popover.show()
