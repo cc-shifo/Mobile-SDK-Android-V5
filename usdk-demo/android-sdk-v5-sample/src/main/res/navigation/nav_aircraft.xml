@@ -193,11 +193,17 @@
             app:destination="@id/mop_down_page" />
     </fragment>
 
+    <!--为了单独调试3通道，屏蔽此代码-->
+    <!--<fragment-->
+    <!--    android:id="@+id/mop_interface_page"-->
+    <!--    android:name="dji.sampleV5.aircraft.pages.MopInterfaceFragment"-->
+    <!--    android:label="mop_interface_page"-->
+    <!--    tools:layout="@layout/frag_mop_interface_page" />-->
     <fragment
         android:id="@+id/mop_interface_page"
-        android:name="dji.sampleV5.aircraft.pages.MopInterfaceFragment"
+        android:name="dji.sampleV5.aircraft.pages.MopThreePipelinesFragment"
         android:label="mop_interface_page"
-        tools:layout="@layout/frag_mop_interface_page" />
+        tools:layout="@layout/frag_mop_interface_page_three_pipelines" />
     <fragment
         android:id="@+id/mop_down_page"
         android:name="dji.sampleV5.aircraft.pages.MopDownFragment"

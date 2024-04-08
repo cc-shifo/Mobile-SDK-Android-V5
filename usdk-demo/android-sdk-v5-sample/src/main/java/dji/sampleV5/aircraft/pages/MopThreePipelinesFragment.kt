@@ -8,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
+import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import dji.sampleV5.aircraft.R
 import dji.sampleV5.aircraft.models.MopVM
+import dji.sampleV5.aircraft.views.MSDKInfoFragment
 import dji.sdk.keyvalue.value.mop.PipelineDeviceType
 import dji.sdk.keyvalue.value.mop.TransmissionControlType
 import dji.v5.utils.common.LogUtils
@@ -19,6 +22,7 @@ import kotlinx.android.synthetic.main.frag_mop_interface_page.btn_disconnect
 import kotlinx.android.synthetic.main.frag_mop_interface_page.cb_reliable
 import kotlinx.android.synthetic.main.frag_mop_interface_page.et_channel_id
 import kotlinx.android.synthetic.main.frag_mop_interface_page.rg_mop_type
+import kotlinx.android.synthetic.main.frag_mop_interface_page_three_pipelines.*
 import kotlinx.android.synthetic.main.frag_payload_data_page.btn_send_data_to_payload
 import kotlinx.android.synthetic.main.frag_payload_data_page.ed_data
 import kotlinx.android.synthetic.main.frag_payload_data_page.message_listview
@@ -31,14 +35,12 @@ import kotlinx.android.synthetic.main.frag_payload_data_page.message_listview
  *
  * Copyright (c) 2022, DJI All Rights Reserved.
  */
-class MopInterfaceFragment : DJIFragment() {
+class MopThreePipelinesFragment : DJIFragment() {
     companion object {
-        const val TAG = "MopFragment"
+        const val TAG = "MopThreePipelinesFragment"
     }
 
-    private val mopVM: MopVM by viewModels()
-    private var messageList = ArrayList<String>()
-    private lateinit var payLoadAdapter: ArrayAdapter<String>
+
 
 
     private val onKeyListener: View.OnKeyListener = object : View.OnKeyListener {
@@ -59,7 +61,7 @@ class MopInterfaceFragment : DJIFragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.frag_mop_interface_page, container, false)
+        return inflater.inflate(R.layout.frag_mop_interface_page_three_pipelines, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -69,55 +71,24 @@ class MopInterfaceFragment : DJIFragment() {
     }
 
     private fun initListener() {
-        mopVM.initListener()
-        ed_data.setOnKeyListener(onKeyListener)
-        btn_connect.setOnClickListener {
-            val deviceType = getType(rg_mop_type.checkedRadioButtonId)
-            val transferType = if (cb_reliable.isChecked) TransmissionControlType.STABLE else TransmissionControlType.UNRELIABLE
-            val id = et_channel_id.text.toString().trim().toInt()
-            mopVM.connect(id, deviceType, transferType)
-        }
-
-        btn_disconnect.setOnClickListener {
-            mopVM.stopMop()
-        }
-
-        btn_send_data_to_payload.setOnClickListener {
-            LogUtils.i(PayLoadDataFragment.TAG, "------------------------Start sending data ---------------------------")
-            val sendByteArray = ed_data.text.toString().toByteArray()
-            mopVM.sendData(sendByteArray)
-        }
-
-        btn_rcv_data_from_payload.setOnClickListener {
-            LogUtils.i(PayLoadDataFragment.TAG, "------------------------Start receiving data ---------------------------")
-            mopVM.readData()
-        }
+       // nothing
     }
 
     private fun initView() {
-        payLoadAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, messageList)
-        message_listview.adapter = payLoadAdapter
-
-
-        mopVM.receiveMessageLiveData.observe(viewLifecycleOwner, { t ->
-            LogUtils.i(TAG, t)
-            messageList.add(t)
-            payLoadAdapter.notifyDataSetChanged()
-            message_listview.setSelection(messageList.size - 1)
-        })
-    }
-
-    private fun getType(checkedRadioButtonId: Int): PipelineDeviceType {
-        return when (checkedRadioButtonId) {
-            R.id.rb_on_board -> PipelineDeviceType.ONBOARD
-            R.id.rb_payload -> PipelineDeviceType.PAYLOAD
-            else -> PipelineDeviceType.PAYLOAD
+        childFragmentManager.commit {
+            add(R.id.frag_mop_49152, MopInterfaceFragment())
+            add(R.id.frag_mop_49153, MopInterfaceFragment())
+            add(R.id.frag_mop_49160, MopInterfaceFragment())
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        mopVM.stopMop()
+        // val transaction1: FragmentTransaction = childFragmentManager.beginTransaction();
+        // transaction1.add(R.id.frag_mop_49152, MopInterfaceFragment())
+        //     .commit()
+        // val transaction2: FragmentTransaction = childFragmentManager.beginTransaction();
+        // transaction2.add(R.id.frag_mop_49153, MopInterfaceFragment())
+        //     .commit()
+        // val transaction3: FragmentTransaction = childFragmentManager.beginTransaction();
+        // transaction3.add(R.id.frag_mop_49160, MopInterfaceFragment())
+        //     .commit()
     }
 
 }

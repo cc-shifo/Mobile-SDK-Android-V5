@@ -9,6 +9,7 @@ import dji.v5.manager.mop.DataResult
 
 import dji.v5.manager.mop.Pipeline
 import dji.v5.manager.mop.PipelineManager
+import dji.v5.utils.common.BytesUtil
 import dji.v5.utils.common.DJIExecutor
 import dji.v5.utils.common.LogUtils
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -67,7 +68,8 @@ class MopVM : DJIViewModel() {
         if (len > 0) {
             var time = "Receive time：${getTimeNow()}"
             if (data.isNotEmpty()) {
-                val newValueString = String(data)
+                // val newValueString = String(data)
+                val newValueString = BytesUtil.byte2hex(data, 0, len)
                 time += "，Receive content：$newValueString"
                 receiveMessageLiveData.postValue(time)
             } else {
