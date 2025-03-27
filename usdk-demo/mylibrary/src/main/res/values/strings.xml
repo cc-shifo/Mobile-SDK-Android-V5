@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uxsdk_app_ok">OK</string>
+    <string name="uxsdk_app_cancel">Cancel</string>
+    <string name="uxsdk_alert">Alert</string>
+
+
+    <string name="uxsdk_string_default_value">N/A</string>
+
+    <!-- Telemetry widgets -->
+    <string name="uxsdk_unit_meters">m</string>
+    <string name="uxsdk_unit_feet">ft</string>
+    <string name="uxsdk_value_meters">%1$s m</string>
+    <string name="uxsdk_value_feet">%1$s ft</string>
+    <string name="uxsdk_unit_meter_per_second">m/s</string>
+    <string name="uxsdk_unit_km_per_hr">km/h</string>
+    <string name="uxsdk_unit_mile_per_hr">mph</string>
+    <string name="uxsdk_altitude_title">H</string>
+    <string name="uxsdk_agl_title">H AGL</string>
+    <string name="uxsdk_amsl_altitude_title">H AMSL</string>
+    <string name="uxsdk_distance_home_title">D</string>
+    <string name="uxsdk_distance_rc_title">DRC</string>
+    <string name="uxsdk_vps_title">VPS</string>
+    <string name="uxsdk_horizontal_velocity_title">H.S.</string>
+    <string name="uxsdk_vertical_velocity_title">V.S.</string>
+
+    <string name="uxsdk_storage_status_needs_formatting">Formatting Required</string>
+    <string name="uxsdk_storage_status_remaining_space_mb">%1$d MB</string>
+    <string name="uxsdk_storage_status_remaining_space_gb">%1$.2f GB</string>
+
+    <!-- System Status Widget-->
+    <string name="uxsdk_max_flight_height_limit">Max Flight Altitude: %1$s</string>
+
+    <!--gps rtk widget-->
+    <string name="uxsdk_rtk_solution_none">NONE</string>
+    <string name="uxsdk_rtk_solution_single">SINGLE</string>
+    <string name="uxsdk_rtk_solution_float">FLOAT</string>
+    <string name="uxsdk_rtk_solution_fixed">FIX</string>
+    <string name="uxsdk_rtk_solution_unknown">UNKNOWN</string>
+    <string name="uxsdk_rtk_setting_menu_setting_fail">Setting failed</string>
+    <string name="uxsdk_rtk_setting_menu_customer_rtk_save_failed_tips">Setting failed,possible reasons:\n1. Input parameter incorrect. Check input parameter\n2. Account expired. Check if account is valid\n3. Not network connection. Check network connection status\n4. Server error. Contact RTK supplier to check server status</string>
+    <string name="uxsdk_rtk_type_unknown_rtk">Unknown RTK</string>
+    <string name="uxsdk_rtk_type_nrtk">Network RTK</string>
+    <string name="uxsdk_rtk_type_rtk_mobile_station">D-RTK 2 Mobile Station</string>
+    <string name="uxsdk_rtk_type_rtk_base_station">Base Station</string>
+    <string name="uxsdk_rtk_type_custom_rtk">Custom Network RTK</string>
+    <string name="uxsdk_rtk_type_cmcc_rtk">CMCC RTK</string>
+
+    <!--DeviceHealthAndStatusWidget-->
+    <string name="uxsdk_fpv_message_box_empty_content_v2">Normal</string>
+    <string name="uxsdk_fpv_tip_remote_disconnect">Aircraft not connected</string>
+
+</resources>

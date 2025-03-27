@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uxsdk_app_ok">OK</string>
+    <string name="uxsdk_app_cancel">取消</string>
+    <string name="uxsdk_alert">警报</string>
+
+
+    <string name="uxsdk_string_default_value">N/A</string>
+
+
+    <!-- Telemetry widgets -->
+    <string name="uxsdk_unit_meters">m</string>
+    <string name="uxsdk_unit_feet">ft</string>
+    <string name="uxsdk_value_meters">%1$s m</string>
+    <string name="uxsdk_value_feet">%1$s ft</string>
+    <string name="uxsdk_unit_meter_per_second">m/s</string>
+    <string name="uxsdk_unit_km_per_hr">km/h</string>
+    <string name="uxsdk_unit_mile_per_hr">mph</string>
+    <string name="uxsdk_altitude_title">H</string>
+    <string name="uxsdk_agl_title">H AGL</string>
+    <string name="uxsdk_amsl_altitude_title">H AMSL</string>
+    <string name="uxsdk_distance_home_title">D</string>
+    <string name="uxsdk_distance_rc_title">DRC</string>
+    <string name="uxsdk_vps_title">VPS</string>
+    <string name="uxsdk_horizontal_velocity_title">H.S.</string>
+    <string name="uxsdk_vertical_velocity_title">V.S.</string>
+
+    <string name="uxsdk_storage_status_needs_formatting">需要格式化</string>
+    <string name="uxsdk_storage_status_remaining_space_mb">%1$d MB</string>
+    <string name="uxsdk_storage_status_remaining_space_gb">%1$.2f GB</string>
+
+    <!-- System Status Widget-->
+    <string name="uxsdk_max_flight_height_limit">最大飞行高度： %1$s</string>
+
+    <!--gps rtk widget-->
+    <string name="uxsdk_rtk_solution_none">NONE</string>
+    <string name="uxsdk_rtk_solution_single">SINGLE</string>
+    <string name="uxsdk_rtk_solution_float">FLOAT</string>
+    <string name="uxsdk_rtk_solution_fixed">FIXED</string>
+    <string name="uxsdk_rtk_solution_unknown">未知</string>
+    <string name="uxsdk_rtk_setting_menu_setting_fail">设置失败</string>
+    <string name="uxsdk_rtk_setting_menu_customer_rtk_save_failed_tips">保存失败，可能原因：\n1.输入参数不正确，请检查输入参数\n2.账号过期，请确认账号是否有效\n3.无网络，请检查网络连接状态\n4.服务器故障，请联系RTK供应商确认服务器状态</string>
+    <string name="uxsdk_rtk_type_unknown_rtk">未知RTK类型</string>
+    <string name="uxsdk_rtk_type_nrtk">网络 RTK</string>
+    <string name="uxsdk_rtk_type_rtk_mobile_station">D-RTK 2 移动站</string>
+    <string name="uxsdk_rtk_type_rtk_base_station">基站</string>
+    <string name="uxsdk_rtk_type_custom_rtk">自定义网络 RTK</string>
+    <string name="uxsdk_rtk_type_cmcc_rtk">CMCC RTK</string>
+
+    <!--DeviceHealthAndStatusWidget-->
+    <string name="uxsdk_fpv_message_box_empty_content_v2">当前正常</string>
+    <string name="uxsdk_fpv_tip_remote_disconnect">飞行器未连接</string>
+
+</resources>
